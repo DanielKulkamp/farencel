@@ -50,7 +50,10 @@ fn main() {
                 );
                 break;
             },
-            _ => continue,
+            _ => {
+                unit.clear();
+                continue
+            },
         };
     }
 }
