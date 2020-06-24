@@ -22,8 +22,8 @@ fn main() {
     }
 
     loop {
-        let F = String::from("F");
-        let C = String::from("C");
+        let f = String::from("F");
+        let c = String::from("C");
 
         println!("Enter the unit ('F' or 'C')");
         unit = String::new();
@@ -32,10 +32,10 @@ fn main() {
                 println!("Failed to read unity line");
                 continue;
             }
-            Ok(a) => {}
+            Ok(_a) => {}
         };
         unit = unit.trim().to_string();
-        if unit.eq_ignore_ascii_case(&F) {
+        if unit.eq_ignore_ascii_case(&f) {
             println!(
                 "you entered {}°F that equals {}°C",
                 temperature,
@@ -43,7 +43,7 @@ fn main() {
             );
             break;
         }
-        if unit.eq_ignore_ascii_case(&C) {
+        if unit.eq_ignore_ascii_case(&c) {
             println!(
                 "you entered {}°C that equals {}°F",
                 temperature,
